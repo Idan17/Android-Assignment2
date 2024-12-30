@@ -8,6 +8,18 @@
     android:padding="16dp"
     tools:context=".EditStudentActivity">
 
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="30dp"
+        android:background="#03E2CD"
+        android:backgroundTint="#03E2CD"
+        android:text="Edit Student"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
 
     <EditText
         android:id="@+id/inputName"
