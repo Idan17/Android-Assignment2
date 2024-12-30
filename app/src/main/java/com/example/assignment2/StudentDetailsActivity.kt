@@ -3,6 +3,7 @@ package com.example.assignment2
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,10 +27,10 @@ class StudentDetailsActivity : AppCompatActivity() {
         val nameText = findViewById<TextView>(R.id.textName)
         val idText = findViewById<TextView>(R.id.textId)
         val btnEdit = findViewById<Button>(R.id.btnEdit)
-
+        val checkbox = findViewById<CheckBox>(R.id.studentCheckBox)
         nameText.text = student?.name
         idText.text = student?.id
-
+        checkbox.isChecked = student!!.isChecked
         btnEdit.setOnClickListener {
             val intent = Intent(this, EditStudentActivity::class.java)
             intent.putExtra("studentId", studentId)

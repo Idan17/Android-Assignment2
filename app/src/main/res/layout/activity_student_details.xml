@@ -13,23 +13,35 @@
         android:id="@+id/textName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="Student Name"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="Student ID"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/studentCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="20dp"
+        android:enabled="false" />
 
     <Button
         android:id="@+id/btnEdit"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit Student" />
+        android:layout_marginLeft="146dp"
+        android:layout_marginTop="440dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Edit Student"
+        app:cornerRadius="0dp" />
 
 </LinearLayout>

@@ -33,6 +33,12 @@ class NewStudentActivity : AppCompatActivity() {
                 finish() // Return to the previous screen
             }
         }
+        val btnCancel = findViewById<Button>(R.id.btnCancel)
 
+        btnCancel.setOnClickListener {
+                finish() // Return to the previous screen
+        }
     }
+
+
 }
