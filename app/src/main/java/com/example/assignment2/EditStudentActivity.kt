@@ -25,13 +25,13 @@ class EditStudentActivity : AppCompatActivity() {
         val studentId = intent.getStringExtra("studentId")
         val student = StudentRepository.getStudentById(studentId!!)
 
-        val nameInput = findViewById<EditText>(R.id.inputName)
-        val idInput = findViewById<EditText>(R.id.inputId)
-        val checkboxInput = findViewById<CheckBox>(R.id.studentCheckBox)
+        val nameInput = findViewById<EditText>(R.id.edit_student_activity_input_name)
+        val idInput = findViewById<EditText>(R.id.edit_student_activity_input_Id)
+        val checkboxInput = findViewById<CheckBox>(R.id.edit_student_activity_student_CheckBox)
 
-        val btnSave = findViewById<Button>(R.id.btnSave)
-        val btnDelete = findViewById<Button>(R.id.btnDelete)
-        val btnCancel = findViewById<Button>(R.id.btnCancel)
+        val btnSave = findViewById<Button>(R.id.edit_student_activity_save_button)
+        val btnDelete = findViewById<Button>(R.id.edit_student_activity_delete_button)
+        val btnCancel = findViewById<Button>(R.id.edit_student_activity_cancel_button)
 
         checkboxInput.isChecked = student!!.isChecked
         nameInput.setText(student?.name)
