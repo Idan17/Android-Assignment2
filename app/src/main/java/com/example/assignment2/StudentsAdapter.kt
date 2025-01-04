@@ -15,10 +15,10 @@ class StudentsAdapter(
 ) : RecyclerView.Adapter<StudentsAdapter.StudentViewHolder> (){
 
     class StudentViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val photo: ImageView = view.findViewById(R.id.studentPhoto)
-        val name: TextView = view.findViewById(R.id.studentName)
-        val id: TextView = view.findViewById(R.id.studentId)
-        val checkBox: CheckBox = view.findViewById(R.id.studentCheckBox)
+        val photo: ImageView = view.findViewById(R.id.student_row_student_photo)
+        val name: TextView = view.findViewById(R.id.student_row_student_name)
+        val id: TextView = view.findViewById(R.id.student_row_student_Id)
+        val checkBox: CheckBox = view.findViewById(R.id.student_row_student_checkBox)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
         val view = LayoutInflater.from(parent.context)
