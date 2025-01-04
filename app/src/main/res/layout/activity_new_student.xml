@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".NewStudentActivity">
+
+    <TextView
+        android:id="@+id/new_student_activity_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:height="30dp"
+        android:background="#03E2CD"
+        android:backgroundTint="#03E2CD"
+        android:text="New Student"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/new_student_activity_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Student Name"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/new_student_activity_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/new_student_activity_id_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Student ID"
+        app:layout_constraintTop_toBottomOf="@id/new_student_activity_name_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/new_student_activity_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/new_student_activity_add_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="Add Student"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/new_student_activity_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="Cancel"
+            app:cornerRadius="0dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
