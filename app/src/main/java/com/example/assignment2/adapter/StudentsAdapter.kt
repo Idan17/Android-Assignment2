@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.assignment2.R
+import com.example.assignment2.model.Student
 
 class StudentsAdapter(
     private val students: List<Student>,

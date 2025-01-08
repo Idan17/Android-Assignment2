@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.model
 
 object StudentRepository {
     private val students = mutableListOf<Student>()

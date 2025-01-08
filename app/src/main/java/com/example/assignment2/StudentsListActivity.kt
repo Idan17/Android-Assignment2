@@ -13,42 +13,42 @@ import com.example.assignment2.adapter.StudentsAdapter
 import com.example.assignment2.model.StudentRepository
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class MainActivity : AppCompatActivity() {
+class StudentsListActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: StudentsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_students_list)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-//
-//        recyclerView = findViewById(R.id.recyclerView)
-//        val fabAdd = findViewById<FloatingActionButton>(R.id.main_activity_add_button)
-//
-//        adapter = StudentsAdapter(
-//            StudentRepository.getStudents(),
-//            onRowClick = { student ->
-//                val intent = Intent(this, StudentDetailsActivity::class.java)
-//                intent.putExtra("studentId", student.id)
-//                startActivity(intent)
-//            },
-//            onCheckClick = { student ->
-//                student.isChecked = !student.isChecked
-//                adapter.notifyDataSetChanged()
-//            }
-//        )
-//
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//        recyclerView.adapter = adapter
-//
-//        fabAdd.setOnClickListener {
-//            startActivity(Intent(this, NewStudentActivity::class.java))
-//        }
+
+        recyclerView = findViewById(R.id.students_list_recyclerView)
+        val fabAdd = findViewById<FloatingActionButton>(R.id.students_list_add_button)
+
+        adapter = StudentsAdapter(
+            StudentRepository.getStudents(),
+            onRowClick = { student ->
+                val intent = Intent(this, StudentDetailsActivity::class.java)
+                intent.putExtra("studentId", student.id)
+                startActivity(intent)
+            },
+            onCheckClick = { student ->
+                student.isChecked = !student.isChecked
+                adapter.notifyDataSetChanged()
+            }
+        )
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+
+        fabAdd.setOnClickListener {
+            startActivity(Intent(this, NewStudentActivity::class.java))
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")
