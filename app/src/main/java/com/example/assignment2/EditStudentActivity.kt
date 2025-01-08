@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.assignment2.model.StudentRepository
 
 class EditStudentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,12 +43,12 @@ class EditStudentActivity : AppCompatActivity() {
             student?.name = nameInput.text.toString()
             student?.id = idInput.text.toString()
             StudentRepository.updateStudent(student!!)
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, StudentsListActivity::class.java))
         }
 
         btnDelete.setOnClickListener {
             StudentRepository.deleteStudent(student!!)
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, StudentsListActivity::class.java))
 
         }
 

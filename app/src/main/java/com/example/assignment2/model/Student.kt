@@ -1,4 +1,4 @@
-package com.example.assignment2
+package com.example.assignment2.model
 
 data class Student(
     var id: String,       // ID of the student (editable)

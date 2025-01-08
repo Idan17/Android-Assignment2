@@ -42,7 +42,7 @@
 
     <CheckBox
         android:id="@+id/edit_student_activity_student_CheckBox"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_student_activity_input_Id" />

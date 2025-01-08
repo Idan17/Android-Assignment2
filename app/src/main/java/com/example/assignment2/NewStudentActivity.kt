@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.assignment2.model.Student
+import com.example.assignment2.model.StudentRepository
 
 class NewStudentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +24,7 @@ class NewStudentActivity : AppCompatActivity() {
         val nameInput = findViewById<EditText>(R.id.new_student_activity_name_input)
         val idInput = findViewById<EditText>(R.id.new_student_activity_id_input)
         val btnAdd = findViewById<Button>(R.id.new_student_activity_add_button)
+        val btnCancel = findViewById<Button>(R.id.new_student_activity_cancel_button)
 
         btnAdd.setOnClickListener {
             val name = nameInput.text.toString()
@@ -33,7 +36,6 @@ class NewStudentActivity : AppCompatActivity() {
                 finish() // Return to the previous screen
             }
         }
-        val btnCancel = findViewById<Button>(R.id.new_student_activity_cancel_button)
 
         btnCancel.setOnClickListener {
             finish() // Return to the previous screen
